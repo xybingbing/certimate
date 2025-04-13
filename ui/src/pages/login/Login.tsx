@@ -17,7 +17,7 @@ const Login = () => {
 
   const formSchema = z.object({
     username: z.string().email(t("login.username.errmsg.invalid")),
-    password: z.string().min(10, t("login.password.errmsg.invalid")),
+    password: z.string().min(6, t("login.password.errmsg.invalid")),
   });
   const formRule = createSchemaFieldRule(formSchema);
   const {
